@@ -12,8 +12,8 @@ const Addressespage = () => {
   return (
     <>
     <Offline><Disconnect/></Offline>
-    {!isLoading?  <div className="container mb-5">
-    <div className='mx-auto bg-light p-5 mt-2 w-100  rounded-3'>
+    {!isLoading?  <div className="container mb-5 ">
+    <div className='mx-auto bg-light p-2 p-md-5 mt-2 w-100  rounded-3'>
     <AddressCardComponent data={data} />
       <Link to='/FreshCart/add-address' className="btn bg-main text-white text-center w-100  mt-3" >Add new address</Link>
     </div>

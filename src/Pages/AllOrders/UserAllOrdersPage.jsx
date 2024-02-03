@@ -12,7 +12,8 @@ const UserAllOrdersPage = () => {
    <>
    <Offline><Disconnect/></Offline>
    {!isLoading?<div className="container mt-3 mb-5">
-   <div className="mx-auto bg-main-light  rounded-2 ">
+   <div className="mx-auto bg-main-light   rounded-2 ">
+    <p className='fw-bold px-3 py-2 '>My Orders</p>
     <UserAllOrdersComponent />
     </div>
    </div>:<Loader/>}

@@ -14,7 +14,6 @@ const{data,isLoading}=clearCart
 
 useEffect(() => {
  if (data?.message==="success") {
-    console.log('ok');
     queryClient.invalidateQueries("cart");
     setNumOfCartItems(0)
  }

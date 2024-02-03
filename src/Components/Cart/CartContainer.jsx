@@ -14,8 +14,8 @@ const CartContainer = () => {
   return (
 
    <>
-  {!isLoading?cartData?.numOfCartItems===0||errorMsg?<div className=" text-center">
-    <img src={cart} alt="empty cart" />
+  {!isLoading?cartData?.numOfCartItems===0||errorMsg?<div className=" text-center w-75 m-auto" >
+    <img src={cart} alt="empty cart" className="w-75 "/>
     <p className="fs-3 text-muted">Your cart is empty</p>
     <Link to={'/FreshCart/products'}><button className="btn bg-main text-white p-2"> Add some products</button></Link>
   </div>: <div className="container mt-3 ">

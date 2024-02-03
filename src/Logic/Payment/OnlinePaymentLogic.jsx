@@ -6,7 +6,7 @@ const OnlinePaymentLogic = (cartId,shippingAddress) => {
     const [onlinePaymentResponse, setOnlinePaymentResponse] = useState({})
     const onlinePayemnt = useMutation(async () => {
     
-        return UsePostDataToken(`/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173/FreshCart`,{
+        return UsePostDataToken(`/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173/FreshCart/`,{
             shippingAddress:{
                 details: shippingAddress?.details,
                 phone: shippingAddress?.phone,

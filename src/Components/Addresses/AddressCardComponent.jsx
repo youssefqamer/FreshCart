@@ -7,7 +7,7 @@ const AddressCardComponent = ({data}) => {
    <>
     {data?.data?.length>0?<p className="fw-bold">My Addresses</p>:<p className="fw-bold">There are no addresses yet</p>}
          {data?.data?.map((address,index)=>{
-        return <div key={index} className="bg-light shadow rounded-4  p-4 mt-2">
+        return <div key={index} className="bg-light shadow rounded-4  p-4 mt-2 ">
          <div className="d-flex justify-content-between align-items-center">
          <p className="fs-5"> Home: <span className="text-muted">{address.name}</span></p>
          <button className="btn btn-danger" onClick={()=>removeAddress(address._id)}>
