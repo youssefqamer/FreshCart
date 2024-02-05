@@ -4,6 +4,7 @@ import CashpaymentLogic from "../../Logic/Payment/CashpaymentLogic";
 import Loader from "../../Utilites/Loader/Loader";
 import ChooseAddressLogic from "../../Logic/Payment/ChooseAddressLogic";
 import OnlinePaymentLogic from './../../Logic/Payment/OnlinePaymentLogic';
+import { Link } from "react-router-dom";
 
 const PaymentMethodComponent = () => {
    const [data,isLoading]=GetUserAddressesLogic()
@@ -27,13 +28,19 @@ const PaymentMethodComponent = () => {
      <input  name="payment" id="visa" type="radio" value='visa' className="input "  onChange={getSlectedPaymentMethod}/>
       <label htmlFor="visa" className="fw-bold">Credit / Debit card</label>
      </div>
-     <select onChange={getSelectedAddress} className="select mt-3 px-2 mb-5 w-50 mb-3" >
+     <select onChange={getSelectedAddress} className="select mt-3 px-2 mb-3 select-address " >
      <option value="0">Choose Address</option>
      {data?.data?.length>0?data?.data?.map((address,index)=>{
         return  <option value={address?._id} key={index}>{address?.name}</option>
-     }):<option value="0" >No addresses available</option>}
-   
+     }):<>
+     <option value="0" >No addresses available</option>
+     </> }
+
      </select>
+     {data?.data?.length>0?'':<div className="mt-0">
+     
+     <Link to='/FreshCart/add-address' className=" d-block w-100"><p className="text-danger fw-bolder">you must add an address *</p></Link>
+      </div>}
     </div>
      <div className="d-flex align-items-center justify-content-end gap-2">
      <div className="disabled bg-light px-4 py-2 rounded-3 fw-bolder" style={{width:'fit-content'}}>{totalCartPrice} EGP</div>

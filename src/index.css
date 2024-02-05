@@ -600,3 +600,12 @@ a , a:hover{
 .user-info:hover{
 background-color: var(--light-color);
 }
+/* payment method */
+.select-address{
+  width: 50%;
+}
+@media screen and (max-width:991px) {
+  .select-address{
+    width: 75%;
+  }
+}
