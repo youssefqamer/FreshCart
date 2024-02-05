@@ -24,7 +24,7 @@ const LoginPage = () => {
 : null}
    <div className='d-flex justify-content-center align-items-center flex-wrap my-2'>
         <span className='me-1'>New to FreshCart? </span> 
-        <Link to='/register' className=' fw-bold' style={{color:'#0099ff'}}>Create an account</Link>
+        <Link to='/FreshCart/register' className=' fw-bold' style={{color:'#0aad0a'}}>Create an account</Link>
       </div>
     <Link to='/FreshCart/forgotPassword' className={`${styles.forgotPassword} fs-6` }>Forgot password ?</Link>
     <button  type="submit" className={`${styles.loginButton} btn ${isLoading?'disabled':''}` }  disabled={Object.keys(formik.errors).length > 0 || !formik.dirty || !formik.isValid}>{isLoading?<i className="fa-solid fa-spinner fa-spin  "></i>:'Login'}</button>

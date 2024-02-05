@@ -222,7 +222,7 @@ a , a:hover{
   text-align: center;
   background-color: transparent;
   border: none;
-  border-bottom: solid 2px rgb(20, 181, 230);
+  border-bottom: solid 2px var(--main-color);
   font-size: 20px;
   color: white;
   outline: none;
@@ -528,7 +528,8 @@ a , a:hover{
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  background-color: rgb(255, 69, 69);
+  
+  background-color: var(--main-color);
   color: white;
   cursor: pointer;
   display: flex;

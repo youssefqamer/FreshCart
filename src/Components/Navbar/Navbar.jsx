@@ -40,7 +40,7 @@ useEffect(() => {
    <>
   <nav className="navbar navbar-expand-xl navbar-light bg-light">
   <div className="container-fluid px-5 ">
-    <Link className="navbar-brand" to='/'>
+    <Link className="navbar-brand" to='/FreshCart/'>
       <img src={logo} alt="FreshCart" />
     </Link>
     <button className="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@ useEffect(() => {
         </li>
       {token?  <li className="nav-item px-1 dropdown">     
          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         <div style={{width:'38px',height:'38px',borderRadius:'50%',backgroundColor:'green',cursor:'pointer'}} className=" text-white fw-bold d-flex justify-content-center align-items-center ">{userName?.split('').slice(0,1).join('')}
+         <div style={{width:'38px',height:'38px',borderRadius:'50%',backgroundColor:'#0aad0a',cursor:'pointer'}} className=" text-white fw-bold d-flex justify-content-center align-items-center ">{userName?.split('').slice(0,1).join('')}
           </div>
 </a>
 

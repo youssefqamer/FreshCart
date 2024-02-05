@@ -24,7 +24,7 @@ const ResetnewPasswordPage = () => {
   <div className="mt-1 alert alert-danger p-1">{formik.errors.confirmPassword}</div>
 : null}
       </div>
-      <button  type="submit" className={`btn ${styles.resetButton} w-50 d-block m-auto ${isLoading?'disabled':''}` }  disabled={Object.keys(formik.errors).length > 0 || !formik.dirty || !formik.isValid}>{isLoading?<i className="fa-solid fa-spinner fa-spin  "></i>:'Save'}</button>
+      <button  type="submit" className={`btn ${styles.resetButton} w-75 d-block m-auto ${isLoading?'disabled':''}` }  disabled={Object.keys(formik.errors).length > 0 || !formik.dirty || !formik.isValid}>{isLoading?<i className="fa-solid fa-spinner fa-spin  "></i>:'Save'}</button>
 
       </form>
 

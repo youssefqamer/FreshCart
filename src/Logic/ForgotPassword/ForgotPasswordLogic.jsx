@@ -27,20 +27,18 @@ const ForgotPasswordLogic = () => {
             return UsePostData(`/api/v1/auth/forgotPasswords`, values);
           } catch (error) {
             
-            console.error(error);
-            throw error; 
+           return error
          
           }    })
     const {data,isLoading,error}=forgotPasswordMuaton
     useEffect(() => {
   if (data) {
-    console.log(data);
     if (data?.data?.statusMsg==='success') {
         localStorage.setItem('userEmail',formik.values.email)
         navigate('/FreshCart/verifyCode')
+    }else{
+        setEmailMsgError(data?.response?.data?.message);
     }
-}else{
-    setEmailMsgError(error?.response?.data?.message);
 }
     }, [data,error])
    
