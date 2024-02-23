@@ -28,17 +28,19 @@ const updateUserPassMutation=useMutation(async()=>{
         rePassword:formik.values.rePassword,
     })
 })
-const {data,isLoading,error}=updateUserPassMutation
+const {data,isLoading}=updateUserPassMutation
 useEffect(() => {
   if (!isLoading) {
+   if (data) {
     if (data?.message==='success') {
         localStorage.setItem('token',data?.token)
         toast.success('Password changed successfully')
        formik.resetForm()
        
-    }else if(error){
-        toast.error(error?.response?.data?.errors?.msg)
+    }else{
+        toast.error(data?.response?.data?.errors?.msg)
     }
+   }
   }
 }, [isLoading])
 

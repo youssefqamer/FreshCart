@@ -22,9 +22,9 @@ const LoginPage = () => {
     {formik.errors.password && formik.touched.password ? 
   <div className="mt-1 alert alert-danger p-1">{formik.errors.password}</div>
 : null}
-   <div className='d-flex justify-content-center align-items-center flex-wrap my-2'>
-        <span className='me-1'>New to FreshCart? </span> 
-        <Link to='/FreshCart/register' className=' fw-bold' style={{color:'#0aad0a'}}>Create an account</Link>
+   <div className='d-flex justify-content-center align-items-center flex-wrap my-2 w-100 fs-6'>
+        <span className='me-1 '>New to FreshCart? </span> 
+        <Link to='/FreshCart/register' className=' fw-bold ' style={{color:'#0aad0a',fontSize:'15px'}}>Create an account</Link>
       </div>
     <Link to='/FreshCart/forgotPassword' className={`${styles.forgotPassword} fs-6` }>Forgot password ?</Link>
     <button  type="submit" className={`${styles.loginButton} btn ${isLoading?'disabled':''}` }  disabled={Object.keys(formik.errors).length > 0 || !formik.dirty || !formik.isValid}>{isLoading?<i className="fa-solid fa-spinner fa-spin  "></i>:'Login'}</button>

@@ -15,10 +15,7 @@ const SideFilterLogic = () => {
       priceLowerThanString=`&price[lte]=${PriceLowerThan}`
     } 
   
-  useEffect(() => {
-    setCategoryQueryString(selectedCategories?.map((categoryId) => `category[in]=${categoryId}`).join("&"));
-    sessionStorage.setItem("checkedCategories", categoryQueryString);
-  }, [selectedCategories, categoryQueryString]);
+
     const [page, setPage] = useState(1)
     const handlePageChange=(value)=>{
         setPage(value)
@@ -60,6 +57,10 @@ const SideFilterLogic = () => {
       useEffect(() => {
         sessionStorage.setItem('categories',selectedCategories)
       }, [selectedCategories])
+      useEffect(() => {
+        setCategoryQueryString(selectedCategories?.map((categoryId) => `category[in]=${categoryId}`).join("&"));
+        sessionStorage.setItem("checkedCategories", categoryQueryString);
+      }, [selectedCategories, categoryQueryString]);
       return[limit,sort,priceLowerThanString,PriceLowerThan,selectedCategories,page,categoryQueryString,handlePageChange,handleLimit,handleSort,handlePriceLowerThan,handleChackedCategories]
 }
 
